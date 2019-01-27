@@ -43,6 +43,9 @@ namespace Formatter
                 case "HTML":
                     formatter = new HtmlFormatter();
                     break;
+                case "XML":
+                    formatter = new XmlFormatter();
+                    break;
                 default:
                     MessageBox.Show("Formatter not implemented!");
                     return;

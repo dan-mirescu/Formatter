@@ -66,6 +66,7 @@
     <Compile Include="Converters\LinesToArrayConverter.cs" />
     <Compile Include="Formatters\HtmlFormatter.cs" />
     <Compile Include="Formatters\IFormatter.cs" />
+    <Compile Include="Formatters\XmlFormatter.cs" />
     <Compile Include="Minifiers\IMinifier.cs" />
     <Compile Include="Formatters\JsonFormatter.cs" />
     <Compile Include="MainForm.cs">

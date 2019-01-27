@@ -77,7 +77,8 @@
             this.cmbLanguages.Items.AddRange(new object[] {
             "JSON",
             "HTML",
-            "JS"});
+            "JS",
+            "XML"});
             this.cmbLanguages.Location = new System.Drawing.Point(181, 13);
             this.cmbLanguages.Name = "cmbLanguages";
             this.cmbLanguages.Size = new System.Drawing.Size(133, 21);
