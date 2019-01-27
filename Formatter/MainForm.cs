@@ -2,6 +2,7 @@
 using System.Drawing;
 using System.Windows.Forms;
 using FastColoredTextBoxNS;
+using Formatter.Converters;
 using Formatter.Formatters;
 using Formatter.Minifiers;
 using Newtonsoft.Json;
@@ -87,6 +88,20 @@ namespace Formatter
             try
             {
                 _box.Text = minifier.Minify(_box.Text);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnLinesToArray_Click(object sender, EventArgs e)
+        {
+            var converter = new LinesToArrayConverter();
+
+            try
+            {
+                _box.Text = converter.Convert(_box.Text);
             }
             catch (Exception ex)
             {

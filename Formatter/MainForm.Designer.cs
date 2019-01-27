@@ -34,6 +34,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.cmbLanguages = new System.Windows.Forms.ComboBox();
             this.btnMinify = new System.Windows.Forms.Button();
+            this.btnLinesToArray = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnFormat
@@ -93,11 +94,22 @@
             this.btnMinify.UseVisualStyleBackColor = true;
             this.btnMinify.Click += new System.EventHandler(this.btnMinify_Click);
             // 
+            // btnLinesToArray
+            // 
+            this.btnLinesToArray.Location = new System.Drawing.Point(590, 11);
+            this.btnLinesToArray.Name = "btnLinesToArray";
+            this.btnLinesToArray.Size = new System.Drawing.Size(111, 23);
+            this.btnLinesToArray.TabIndex = 6;
+            this.btnLinesToArray.Text = "Lines to array";
+            this.btnLinesToArray.UseVisualStyleBackColor = true;
+            this.btnLinesToArray.Click += new System.EventHandler(this.btnLinesToArray_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(876, 495);
+            this.Controls.Add(this.btnLinesToArray);
             this.Controls.Add(this.btnMinify);
             this.Controls.Add(this.cmbLanguages);
             this.Controls.Add(this.label1);
@@ -117,6 +129,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cmbLanguages;
         private System.Windows.Forms.Button btnMinify;
+        private System.Windows.Forms.Button btnLinesToArray;
     }
 }
 
