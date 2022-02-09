@@ -35,11 +35,14 @@
             this.cmbLanguages = new System.Windows.Forms.ComboBox();
             this.btnMinify = new System.Windows.Forms.Button();
             this.btnLinesToArray = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.cmbTransformations = new System.Windows.Forms.ComboBox();
+            this.btnTransform = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnFormat
             // 
-            this.btnFormat.Location = new System.Drawing.Point(13, 12);
+            this.btnFormat.Location = new System.Drawing.Point(222, 12);
             this.btnFormat.Name = "btnFormat";
             this.btnFormat.Size = new System.Drawing.Size(75, 23);
             this.btnFormat.TabIndex = 1;
@@ -64,7 +67,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(119, 17);
+            this.label1.Location = new System.Drawing.Point(10, 16);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(55, 13);
             this.label1.TabIndex = 3;
@@ -79,7 +82,7 @@
             "HTML",
             "JS",
             "XML"});
-            this.cmbLanguages.Location = new System.Drawing.Point(181, 13);
+            this.cmbLanguages.Location = new System.Drawing.Point(72, 12);
             this.cmbLanguages.Name = "cmbLanguages";
             this.cmbLanguages.Size = new System.Drawing.Size(133, 21);
             this.cmbLanguages.TabIndex = 4;
@@ -87,7 +90,7 @@
             // 
             // btnMinify
             // 
-            this.btnMinify.Location = new System.Drawing.Point(404, 11);
+            this.btnMinify.Location = new System.Drawing.Point(313, 12);
             this.btnMinify.Name = "btnMinify";
             this.btnMinify.Size = new System.Drawing.Size(75, 23);
             this.btnMinify.TabIndex = 5;
@@ -97,19 +100,54 @@
             // 
             // btnLinesToArray
             // 
-            this.btnLinesToArray.Location = new System.Drawing.Point(590, 11);
+            this.btnLinesToArray.Location = new System.Drawing.Point(777, 12);
             this.btnLinesToArray.Name = "btnLinesToArray";
-            this.btnLinesToArray.Size = new System.Drawing.Size(111, 23);
+            this.btnLinesToArray.Size = new System.Drawing.Size(87, 23);
             this.btnLinesToArray.TabIndex = 6;
             this.btnLinesToArray.Text = "Lines to array";
             this.btnLinesToArray.UseVisualStyleBackColor = true;
             this.btnLinesToArray.Click += new System.EventHandler(this.btnLinesToArray_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(426, 17);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(54, 13);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Transform";
+            // 
+            // cmbTransformations
+            // 
+            this.cmbTransformations.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbTransformations.FormattingEnabled = true;
+            this.cmbTransformations.Items.AddRange(new object[] {
+            "URL decode",
+            "URL encode",
+            "Base64 decode"});
+            this.cmbTransformations.Location = new System.Drawing.Point(486, 12);
+            this.cmbTransformations.Name = "cmbTransformations";
+            this.cmbTransformations.Size = new System.Drawing.Size(133, 21);
+            this.cmbTransformations.TabIndex = 8;
+            // 
+            // btnTransform
+            // 
+            this.btnTransform.Location = new System.Drawing.Point(635, 11);
+            this.btnTransform.Name = "btnTransform";
+            this.btnTransform.Size = new System.Drawing.Size(44, 23);
+            this.btnTransform.TabIndex = 9;
+            this.btnTransform.Text = "Do";
+            this.btnTransform.UseVisualStyleBackColor = true;
+            this.btnTransform.Click += new System.EventHandler(this.btnTransform_Click);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(876, 495);
+            this.Controls.Add(this.btnTransform);
+            this.Controls.Add(this.cmbTransformations);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.btnLinesToArray);
             this.Controls.Add(this.btnMinify);
             this.Controls.Add(this.cmbLanguages);
@@ -131,6 +169,9 @@
         private System.Windows.Forms.ComboBox cmbLanguages;
         private System.Windows.Forms.Button btnMinify;
         private System.Windows.Forms.Button btnLinesToArray;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox cmbTransformations;
+        private System.Windows.Forms.Button btnTransform;
     }
 }
 

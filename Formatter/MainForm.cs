@@ -5,6 +5,7 @@ using FastColoredTextBoxNS;
 using Formatter.Converters;
 using Formatter.Formatters;
 using Formatter.Minifiers;
+using Formatter.Transformers;
 using Newtonsoft.Json;
 
 namespace Formatter
@@ -42,6 +43,9 @@ namespace Formatter
                     break;
                 case "HTML":
                     formatter = new HtmlFormatter();
+                    break;
+                case "JS":
+                    formatter = new JsFormatter();
                     break;
                 case "XML":
                     formatter = new XmlFormatter();
@@ -105,6 +109,36 @@ namespace Formatter
             try
             {
                 _box.Text = converter.Convert(_box.Text);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnTransform_Click(object sender, EventArgs e)
+        {
+            ITransformer transformer;
+
+            switch(cmbTransformations.SelectedItem.ToString())
+            {
+                case "URL decode":
+                    transformer = new UrlDecodeTransformer();
+                break;
+                case "URL encode":
+                    transformer = new UrlEncodeTransformer();
+                break;
+                case "Base64 decode":
+                    transformer = new Base64DecodeTransformer();
+                break;
+                default:
+                    MessageBox.Show("Transformer not implemented!");
+                return;
+            }
+
+            try
+            {
+                _box.Text = transformer.Transform(_box.Text);
             }
             catch (Exception ex)
             {
