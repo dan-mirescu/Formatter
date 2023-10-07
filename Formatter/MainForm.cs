@@ -131,6 +131,9 @@ namespace Formatter
                 case "Base64 decode":
                     transformer = new Base64DecodeTransformer();
                 break;
+                case "Unescape":
+                    transformer = new UnescapeTransformer();
+                break;
                 default:
                     MessageBox.Show("Transformer not implemented!");
                 return;

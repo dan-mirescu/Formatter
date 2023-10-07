@@ -124,7 +124,8 @@
             this.cmbTransformations.Items.AddRange(new object[] {
             "URL decode",
             "URL encode",
-            "Base64 decode"});
+            "Base64 decode",
+            "Unescape"});
             this.cmbTransformations.Location = new System.Drawing.Point(486, 12);
             this.cmbTransformations.Name = "cmbTransformations";
             this.cmbTransformations.Size = new System.Drawing.Size(133, 21);
